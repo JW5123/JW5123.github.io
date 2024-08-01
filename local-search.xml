@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>mac自動開機和音效關閉</title>
+    <link href="/2024/08/01/macOS/Auto-open_and_Audio-turn-off/"/>
+    <url>/2024/08/01/macOS/Auto-open_and_Audio-turn-off/</url>
+    
+    <content type="html"><![CDATA[<p>適用macbook pro 2016後的機型</p><p>打開終端機輸入下面命令</p><h2 id="自動開機"><a href="#自動開機" class="headerlink" title="自動開機"></a>自動開機</h2><ol><li><p>開啟</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram AutoBoot=%03<br></code></pre></td></tr></table></figure></li><li><p>關閉</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram AutoBoot=%00<br></code></pre></td></tr></table></figure></li></ol><h2 id="開機音效"><a href="#開機音效" class="headerlink" title="開機音效"></a>開機音效</h2><ol><li><p>開啟</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram BootAudio=%01<br></code></pre></td></tr></table></figure></li><li><p>關閉</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram BootAudio=%00<br></code></pre></td></tr></table></figure></li></ol><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>sudo需要先輸入使用者密碼</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>mac相關設定</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/08/01/hello-world/"/>
+    <url>/2024/08/01/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>這裡為Jay’s部落格的開端，將寫一些資訊相關的文章，偶而寫點日常生活有趣的事物，最主要目的是紀錄自己的學習成果。</p><h2 id="第一支程式"><a href="#第一支程式" class="headerlink" title="第一支程式"></a>第一支程式</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World\n&quot;</span>);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
