@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>C++ substr() 使用方式</title>
+    <link href="/2024/08/02/Cpp_Library/substr/"/>
+    <url>/2024/08/02/Cpp_Library/substr/</url>
+    
+    <content type="html"><![CDATA[<p>本篇介紹 substr 取出子字串的方式，以及補充一般陣列如何取出子字串</p><h2 id="substr用法"><a href="#substr用法" class="headerlink" title="substr用法"></a>substr用法</h2><p>substr(參數a, 參數b)</p><blockquote><p>參數a 為要取出子字串的起始索引位置，若要取出 “3” 就輸入該索引位置為 2<br>參數b 從起始索引往後取幾個字串，若只取 “3” 則輸入 1，取 “34” 則輸入 2。</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp">string s = <span class="hljs-string">&quot;123456789&quot;</span>;<br>cout &lt;&lt; s.<span class="hljs-built_in">substr</span>(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>) &lt;&lt; endl; <span class="hljs-comment">// output: 3</span><br>cout &lt;&lt; s.<span class="hljs-built_in">substr</span>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>) &lt;&lt; endl; <span class="hljs-comment">// output: 34</span><br></code></pre></td></tr></table></figure><h2 id="補充-陣列方式"><a href="#補充-陣列方式" class="headerlink" title="補充:陣列方式"></a>補充:陣列方式</h2><blockquote><p>s[i][2] : [i] 陣列裡的字串，[2] 指定索引值</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;string&gt; s = &#123;<span class="hljs-string">&quot;123456789&quot;</span>&#125;;<br><br><span class="hljs-keyword">for</span>(<span class="hljs-type">size_t</span> i = <span class="hljs-number">0</span>; i &lt; s.<span class="hljs-built_in">size</span>(); i++)&#123;<br>    cout &lt;&lt; s[i][<span class="hljs-number">2</span>] &lt;&lt; endl; <span class="hljs-comment">// output: 3</span><br>    cout &lt;&lt; s[i][<span class="hljs-number">2</span>] &lt;&lt; s[i][<span class="hljs-number">3</span>] &lt;&lt; endl; <span class="hljs-comment">// output: 34</span><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++ Standard Library</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C++ Library</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[Leetcode] 2678.Number of Senior Citizens</title>
+    <link href="/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/"/>
+    <url>/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/</url>
+    
+    <content type="html"><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>You are given a 0-indexed array of strings <code>details</code>. Each element of <code>details</code> provides information about a given passenger compressed into a string of length <code>15</code>. The system is such that:</p><ul><li>The first ten characters consist of the phone number of passengers.</li><li>The next character denotes the gender of the person.</li><li>The following two characters are used to indicate the age of the person.</li><li>The last two characters determine the seat allotted to that person.</li></ul><p>Return the number of passengers who are strictly more than 60 years old.</p><blockquote><p><a href="https://leetcode.com/problems/number-of-senior-citizens/description/?envType=daily-question&envId=2024-08-01">2678.Number of Senior Citizens</a></p></blockquote><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p><strong>Example 1:</strong></p><blockquote><p><strong>Input:</strong> details &#x3D; [“7868190130M7522”,”5303914400F9211”,”9273338290F4010”]<br><strong>Output:</strong> 2<br><strong>Explanation:</strong> The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.</p></blockquote><p><strong>Example 2:</strong></p><blockquote><p><strong>Input:</strong> details &#x3D; [“1313579440F2036”,”2921522980M5644”]<br><strong>Output:</strong> 0<br><strong>Explanation:</strong> None of the passengers are older than 60.</p></blockquote><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>陣列裡的每一個字串長度都為15，前10個字元為電話，第11個字元為性別(M、F、0)，第12、13字元為年齡，最後2個為座位，可以確定都是固定長度。根據題目要求，只需要判斷年齡是否大於60，所以只要取出第12、13個字元做處理就好，抓取字串內的某幾個字元，可以使用C++內建函式substr或是一般陣列。參考 <a href="/2024/08/02/Cpp_Library/substr/">C++ substr() 使用方式</a></p><h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><ol><li>用 for 迴圈走訪陣列裡的字串</li><li>可以使用 substr 取出子字串或是使用陣列方式</li><li>將字串轉換為整數 int</li><li>判斷是否大於 60 ，並計數</li><li>回傳大於 60 總數量</li></ol><p><strong>方法一 :</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">countSeniors</span><span class="hljs-params">(vector&lt;string&gt;&amp; details)</span> </span>&#123;<br>        <br>        <span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">const</span> string &amp;s : details) &#123;<br>            string sub_str = s.<span class="hljs-built_in">substr</span>(<span class="hljs-number">11</span>, <span class="hljs-number">2</span>);<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">stoi</span>(sub_str) &gt; <span class="hljs-number">60</span>)<br>                count++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> count;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure><p><strong>方法二(不使用substr) :</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">countSeniors</span><span class="hljs-params">(vector&lt;string&gt;&amp; details)</span> </span>&#123;<br>        <br>        <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; details.<span class="hljs-built_in">size</span>(); i++)&#123;<br>            <span class="hljs-type">int</span> age = ((details[i][<span class="hljs-number">11</span>] - <span class="hljs-string">&#x27;0&#x27;</span>) * <span class="hljs-number">10</span> + details[i][<span class="hljs-number">12</span>] - <span class="hljs-string">&#x27;0&#x27;</span>);<br>            res += (age &gt; <span class="hljs-number">60</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>Array</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Array</tag>
+      
+      <tag>String</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>mac自動開機和音效關閉</title>
+    <link href="/2024/08/01/macOS/Auto-open_and_Audio-turn-off/"/>
+    <url>/2024/08/01/macOS/Auto-open_and_Audio-turn-off/</url>
+    
+    <content type="html"><![CDATA[<p>適用macbook pro 2016後的機型</p><p>打開終端機輸入下面命令</p><h2 id="自動開機"><a href="#自動開機" class="headerlink" title="自動開機"></a>自動開機</h2><ol><li><p>開啟</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram AutoBoot=%03<br></code></pre></td></tr></table></figure></li><li><p>關閉</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram AutoBoot=%00<br></code></pre></td></tr></table></figure></li></ol><h2 id="開機音效"><a href="#開機音效" class="headerlink" title="開機音效"></a>開機音效</h2><ol><li><p>開啟</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram BootAudio=%01<br></code></pre></td></tr></table></figure></li><li><p>關閉</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo nvram BootAudio=%00<br></code></pre></td></tr></table></figure></li></ol><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>指令輸入完後會需要輸入使用者密碼</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>mac相關設定</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>macOS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/08/01/hello-world/"/>
+    <url>/2024/08/01/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>這裡為 Jay 的部落格的開端，將分享一些自己學習到的資訊技術。</p><h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello World\n&quot;</span>);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
