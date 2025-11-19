@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jw5123.github.io/2025/11/19/UVa/Uva12289/</loc>
+    
+    <lastmod>2025-11-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jw5123.github.io/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/</loc>
+    
+    <lastmod>2025-11-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jw5123.github.io/2024/08/01/macOS/Auto-open_and_Audio-turn-off/</loc>
+    
+    <lastmod>2025-11-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jw5123.github.io/2024/08/01/hello-world/</loc>
     
     <lastmod>2025-07-06</lastmod>
@@ -16,21 +37,7 @@
   </url>
   
   <url>
-    <loc>https://jw5123.github.io/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/</loc>
-    
-    <lastmod>2024-08-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jw5123.github.io/2024/08/02/Cpp_Library/substr/</loc>
-    
-    <lastmod>2024-08-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jw5123.github.io/2024/08/01/macOS/Auto-open_and_Audio-turn-off/</loc>
     
     <lastmod>2024-08-01</lastmod>
     
@@ -39,50 +46,60 @@
 
   <url>
     <loc>https://jw5123.github.io/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
   </url>
 
   
   <url>
-    <loc>https://jw5123.github.io/tags/C-Library/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <loc>https://jw5123.github.io/tags/UVa/</loc>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/tags/macOS/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jw5123.github.io/tags/C-Library/</loc>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/tags/Array/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/tags/String/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
 
   
   <url>
-    <loc>https://jw5123.github.io/categories/C-Standard-Library/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <loc>https://jw5123.github.io/categories/UVa/</loc>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/categories/mac%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jw5123.github.io/categories/C-Standard-Library/</loc>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/categories/Leetcode/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
   <url>
     <loc>https://jw5123.github.io/categories/Leetcode/Array/</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2025-11-19</lastmod>
   </url>
   
 </urlset>

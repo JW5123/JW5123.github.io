@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>[UVa] 12289.one-two-three</title>
+    <link href="/2025/11/19/UVa/Uva12289/"/>
+    <url>/2025/11/19/UVa/Uva12289/</url>
+    
+    <content type="html"><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>你的弟弟剛學會寫英文的一二三。他在一張紙上寫了很多這幾個字，而你的工作便是辨認它們。要注意的是你弟弟不過是個小孩子，因此他會犯些小錯誤：至多一個錯誤的字母。單字長度一定是正確的。他所寫的一定是小寫字母，每個單字只可能有一種合理解釋。</p><h2 id="輸入-輸出說明"><a href="#輸入-輸出說明" class="headerlink" title="輸入&#x2F;輸出說明"></a>輸入&#x2F;輸出說明</h2><p><strong>Input:</strong></p><blockquote></blockquote><p>第一行包含你弟弟所寫單字數。接下來的每一行含有一個小寫字母組成的單字。單字必符合上述限制：至多一個錯誤的字母，但是單字長度永遠正確。輸入中最多有 10 個單字。</p><p><strong>Output:</strong></p><blockquote></blockquote><p>對每筆測資，輸出單字的數值。</p><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p><strong>Input:</strong><br>3<br>owe<br>too<br>theee</p><p><strong>Output:</strong><br>1<br>2<br>3</p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>three直接判斷字母數，one與two判斷其中兩個字母是否相同</p><h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br><br>    <span class="hljs-type">int</span> n;<br>    string s;<br>    cin &gt;&gt; n;<br>    <span class="hljs-keyword">while</span>(n--) &#123;<br>        cin &gt;&gt; s;<br>        <span class="hljs-keyword">if</span>(s.<span class="hljs-built_in">size</span>() == <span class="hljs-number">3</span>) &#123;<br>            <span class="hljs-keyword">if</span>((s[<span class="hljs-number">0</span>] == <span class="hljs-string">&#x27;o&#x27;</span> &amp;&amp; s[<span class="hljs-number">1</span>] == <span class="hljs-string">&#x27;n&#x27;</span>) || <br>                (s[<span class="hljs-number">1</span>] == <span class="hljs-string">&#x27;n&#x27;</span> &amp;&amp; s[<span class="hljs-number">2</span>] == <span class="hljs-string">&#x27;e&#x27;</span>) || <br>                (s[<span class="hljs-number">2</span>] == <span class="hljs-string">&#x27;e&#x27;</span> &amp;&amp; s[<span class="hljs-number">0</span>] == <span class="hljs-string">&#x27;o&#x27;</span>)) &#123;<br>                cout &lt;&lt; <span class="hljs-string">&quot;1\n&quot;</span>;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                cout &lt;&lt; <span class="hljs-string">&quot;2\n&quot;</span>;<br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            cout &lt;&lt; <span class="hljs-string">&quot;3\n&quot;</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>UVa</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>UVa</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>C++ substr() 使用方式</title>
     <link href="/2024/08/02/Cpp_Library/substr/"/>
     <url>/2024/08/02/Cpp_Library/substr/</url>
