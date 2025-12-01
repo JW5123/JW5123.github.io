@@ -23,23 +23,23 @@
   <meta name="author" content="Jay">
   <meta name="keywords" content="">
   
-    <meta name="description" content="題目You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:  The first te">
+    <meta name="description" content="題目 3512.Minimum Operations to Make Array Sum Divisible by K  解題思路題目說明要回傳最小陣列總和可被k整除的最少次數，因此直接進行取模運算，餘數即為最少情況。 舉例 :陣列為[3,9,7], k為5陣列總和為19除以5餘數為4，由於可對陣列任一數進行nums[i] - 1，因此餘數相當於扣除多少次才使總和能被k整除。19 - 4 &amp;#x3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Leetcode] 2678.Number of Senior Citizens">
-<meta property="og:url" content="https://jw5123.github.io/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/index.html">
+<meta property="og:title" content="[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K">
+<meta property="og:url" content="https://jw5123.github.io/2025/11/29/Leetcode/Array/3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K/index.html">
 <meta property="og:site_name" content="Jay&#39;s Blog">
-<meta property="og:description" content="題目You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:  The first te">
+<meta property="og:description" content="題目 3512.Minimum Operations to Make Array Sum Divisible by K  解題思路題目說明要回傳最小陣列總和可被k整除的最少次數，因此直接進行取模運算，餘數即為最少情況。 舉例 :陣列為[3,9,7], k為5陣列總和為19除以5餘數為4，由於可對陣列任一數進行nums[i] - 1，因此餘數相當於扣除多少次才使總和能被k整除。19 - 4 &amp;#x3">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2024-08-01T13:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-01T16:38:17.350Z">
+<meta property="article:published_time" content="2025-11-29T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-01T17:28:22.087Z">
 <meta property="article:author" content="Jay">
 <meta property="article:tag" content="Array">
-<meta property="article:tag" content="String">
+<meta property="article:tag" content="Math">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[Leetcode] 2678.Number of Senior Citizens - Jay&#39;s Blog</title>
+  <title>[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K - Jay&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">[Leetcode] 2678.Number of Senior Citizens</span>
+            <span id="subtitle">[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K</span>
           
         </div>
 
@@ -216,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-01 21:00" pubdate>
-          2024年8月1日 晚上
+        <time datetime="2025-11-29 23:00" pubdate>
+          2025年11月29日 晚上
         </time>
       </span>
     
@@ -260,42 +260,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[Leetcode] 2678.Number of Senior Citizens</h1>
+            <h1 id="seo-header">[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><p>You are given a 0-indexed array of strings <code>details</code>. Each element of <code>details</code> provides information about a given passenger compressed into a string of length <code>15</code>. The system is such that:</p>
-<ul>
-<li>The first ten characters consist of the phone number of passengers.</li>
-<li>The next character denotes the gender of the person.</li>
-<li>The following two characters are used to indicate the age of the person.</li>
-<li>The last two characters determine the seat allotted to that person.</li>
-</ul>
-<p>Return the number of passengers who are strictly more than 60 years old.</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-senior-citizens/description/?envType=daily-question&envId=2024-08-01">2678.Number of Senior Citizens</a></p>
+                <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k/description/?envType=daily-question&envId=2025-11-29">3512.Minimum Operations to Make Array Sum Divisible by K</a></p>
 </blockquote>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p><strong>Example 1:</strong></p>
-<blockquote>
-<p><strong>Input:</strong> details &#x3D; [“7868190130M7522”,”5303914400F9211”,”9273338290F4010”]<br><strong>Output:</strong> 2<br><strong>Explanation:</strong> The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.</p>
-</blockquote>
-<p><strong>Example 2:</strong></p>
-<blockquote>
-<p><strong>Input:</strong> details &#x3D; [“1313579440F2036”,”2921522980M5644”]<br><strong>Output:</strong> 0<br><strong>Explanation:</strong> None of the passengers are older than 60.</p>
-</blockquote>
-<h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>陣列裡的每一個字串長度都為15，前10個字元為電話，第11個字元為性別(M、F、0)，第12、13字元為年齡，最後2個為座位，可以確定都是固定長度。根據題目要求，只需要判斷年齡是否大於60，所以只要取出第12、13個字元做處理就好，抓取字串內的某幾個字元，可以使用C++內建函式substr或是一般陣列。參考 <a href="/2024/08/02/Cpp_Library/substr/">C++ substr() 使用方式</a></p>
-<h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><ol>
-<li>用 for 迴圈走訪陣列裡的字串</li>
-<li>可以使用 substr 取出子字串或是使用陣列方式</li>
-<li>將字串轉換為整數 int</li>
-<li>判斷是否大於 60 ，並計數</li>
-<li>回傳大於 60 總數量</li>
-</ol>
-<p><strong>方法一 :</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">countSeniors</span><span class="hljs-params">(vector&lt;string&gt;&amp; details)</span> </span>&#123;<br>        <br>        <span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">const</span> string &amp;s : details) &#123;<br>            string sub_str = s.<span class="hljs-built_in">substr</span>(<span class="hljs-number">11</span>, <span class="hljs-number">2</span>);<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">stoi</span>(sub_str) &gt; <span class="hljs-number">60</span>)<br>                count++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> count;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<p><strong>方法二(不使用substr) :</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">countSeniors</span><span class="hljs-params">(vector&lt;string&gt;&amp; details)</span> </span>&#123;<br>        <br>        <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; details.<span class="hljs-built_in">size</span>(); i++)&#123;<br>            <span class="hljs-type">int</span> age = ((details[i][<span class="hljs-number">11</span>] - <span class="hljs-string">&#x27;0&#x27;</span>) * <span class="hljs-number">10</span> + details[i][<span class="hljs-number">12</span>] - <span class="hljs-string">&#x27;0&#x27;</span>);<br>            res += (age &gt; <span class="hljs-number">60</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>題目說明要回傳最小陣列總和可被k整除的最少次數，因此直接進行取模運算，餘數即為最少情況。</p>
+<p><strong>舉例 :</strong><br>陣列為[3,9,7], k為5<br>陣列總和為19除以5餘數為4，由於可對陣列任一數進行nums[i] - 1，因此餘數相當於扣除多少次才使總和能被k整除。<br>19 - 4 &#x3D; 15<br>15 % 5 &#x3D; 0 (整除)</p>
+<h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><p><strong>方法一 :</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br><br>        <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            sum += nums[i];<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> sum % k;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p><strong>方法二 :</strong><br>使用 <a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/cpp/accumulate-and-partial_sum-in-c-stl-numeric-header/">accumulate</a>  函式庫快速求和</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">accumulate</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>(), <span class="hljs-number">0</span>) % k;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -337,7 +316,7 @@
       
         <a href="/tags/Array/" class="print-no-link">#Array</a>
       
-        <a href="/tags/String/" class="print-no-link">#String</a>
+        <a href="/tags/Math/" class="print-no-link">#Math</a>
       
     </div>
   
@@ -349,8 +328,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[Leetcode] 2678.Number of Senior Citizens</div>
-      <div>https://jw5123.github.io/2024/08/01/Leetcode/Array/2678_Number_of_Senior_Citizens/</div>
+      <div>[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K</div>
+      <div>https://jw5123.github.io/2025/11/29/Leetcode/Array/3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K/</div>
     </div>
     <div class="license-meta">
       
@@ -362,7 +341,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>發布於</div>
-          <div>2024年8月1日</div>
+          <div>2025年11月29日</div>
         </div>
       
       
@@ -411,18 +390,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/02/Cpp_Library/substr/" title="C++ substr() 使用方式">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">C++ substr() 使用方式</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/01/macOS/Auto-open_and_Audio-turn-off/" title="mac自動開機和音效關閉">
-                        <span class="hidden-mobile">mac自動開機和音效關閉</span>
+                      <a href="/2025/11/19/UVa/Uva12289/" title="[UVa] 12289.one-two-three">
+                        <span class="hidden-mobile">[UVa] 12289.one-two-three</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

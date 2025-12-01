@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>[Leetcode] 3512.Minimum Operations to Make Array Sum Divisible by K</title>
+    <link href="/2025/11/29/Leetcode/Array/3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K/"/>
+    <url>/2025/11/29/Leetcode/Array/3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K/</url>
+    
+    <content type="html"><![CDATA[<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><blockquote><p><a href="https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k/description/?envType=daily-question&envId=2025-11-29">3512.Minimum Operations to Make Array Sum Divisible by K</a></p></blockquote><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>題目說明要回傳最小陣列總和可被k整除的最少次數，因此直接進行取模運算，餘數即為最少情況。</p><p><strong>舉例 :</strong><br>陣列為[3,9,7], k為5<br>陣列總和為19除以5餘數為4，由於可對陣列任一數進行nums[i] - 1，因此餘數相當於扣除多少次才使總和能被k整除。<br>19 - 4 &#x3D; 15<br>15 % 5 &#x3D; 0 (整除)</p><h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><p><strong>方法一 :</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br><br>        <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            sum += nums[i];<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> sum % k;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure><p><strong>方法二 :</strong><br>使用 <a href="https://www.geeksforgeeks.org/cpp/accumulate-and-partial_sum-in-c-stl-numeric-header/">accumulate</a>  函式庫快速求和</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">accumulate</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>(), <span class="hljs-number">0</span>) % k;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>Array</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Array</tag>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[UVa] 12289.one-two-three</title>
     <link href="/2025/11/19/UVa/Uva12289/"/>
     <url>/2025/11/19/UVa/Uva12289/</url>
